@@ -1,0 +1,19 @@
+Phonotactics
+
+
+Voiceless non-rhotic liquid at the start of a word? Probably gets voiced.
+
+Coronals are probably dental wherever they constrast with palatals.
+
+The voiceless liquids are produced with slightly more friction than the voiced versions, but not enough to qualify then as true fricatives.
+
+Since unvoiced/voiced was once aspirated/unaspirated, it makes quite a bit of sense to devoice final stops, but to retain clear aspiration on final unvoiced stops.
+
+Vowels between voiceless fricatives were elided with compensatory voicing of the second fricative.
+Therefore: fz, xz, xv...
+Not all weird onset clusters were created this way.
+Though, this might also apply for some [affricate]V[obstruent] sequences, obtaining tʃt.
+
+
+Adjacent stops are disallowed.
+If the do come together morphologically, then the first stop is lenited to the corresponding fricative.

@@ -1,0 +1,91 @@
+Rationalizations
+
+TODO: investigate the uses of voiceless laterals in natlangs more
+
+TODO: contrastive hierarchy
+
+TODO: I don't seem to have put much thought into my nasals. Why not a palatal?
+I know I don't want ŋ, but I'm really debating having ɲ.
+Ukrainian does have nʲ, but then I'll also have /nj/, which will likely end up [nʲ] and will merge with ɲ; I'm not sure that actually reason enough to get rid of ɲ, the collision might be a reason to add it and get some extra crunch (irregularity).
+
+TODO: think about tones.
+I see that the WALS data shows that languages with implosives tend to have simple tone systems, much more than if the language had ejectives only or no glottalization at all.
+
+
+I'm making the call that p' isn't a thing.
+Essentially, it just adds some symmetry with the lack of f', while at the same time reinforcing a very natural assymmetry; namely that ejectives are hard and the front and implosives are hard at the back.
+
+Most palatal/velar consonants were previously velar/uvular.
+Since there were no voiced uvular stops, there are no no velar stops.
+However, that phonetic space is nevertheless available.
+Therefore, I should expect ɟ~g (TODO and more).
+
+The unvoiced stops are phonetically aspirated, though the feature is not contrastive.
+I get the feeling that this is because unaspriated stops became implosive.
+This is following the analysis of non-explosive stops as being marked by not having a positive pressure buildup.
+See ["Explosives, Implosives, and Nonexplosives: the Linguistic Function of Air Pressure Differences in Stops" by George N. Clements](http://nickclements.free.fr/publications/2002a.pdf).
+Presumably, aspirated stops are characterized by a larger pressure buildup than unaspirated, and those features could shift to have the bias ("center of pressure buildup") be more neutral.
+I.e. both kinds of stops have lost some pressure, but current implosives are still characterized by having a lower pressure than unvoiced stops.
+
+Basically, I like the uvular trill from French (and some accents of German and Dutch).
+Therefore, I let the voiced uvular fricative turn to ʀ before fronting of the dorsal consonants.
+Since that trill could be difficult in some circumstances or for some speakers, I'll let ʀ~ʁ.
+I'm not sure if it should be pure free aternation, or if there's also some conditioned cases where the trill sounds like overdoing it.
+
+I've decided not to include phonemic affricates, even though they perhaps normally would be included in languages that allow word-initial /tʃt-/.
+The thing is, not only are stop-fricative clusters allowed with homogenous places of articulation, but also at heterogenous places: /dv/, /tx/, /ks/, /kʃ/, /ps/, &c.
+Similarly, I've ignored palatalization and labialization; rather, I've interpreted it as a realization of clustering with j and w respectively.
+These processes can occur on just about every consonant, so it's not worth exploding the consonant inventory.
+
+I wasn't sold on lateral fricatives, but after seeing Tlingit, I figured: why not have a bunch of laterals?
+I decided on having voiceless laterals as a kind of "less intense" lateral fricative.
+All the same, the voiceless laterals might be in free alternation with the fricatives: l̥~ɬ, ʎ̥~ʎ̝̊ (and can I just state for the record how infuriating it is not to have a curlycued ʎ!).
+
+The liquids, especially the devoiced ones (r̥ l̥ ʎ̥ j̊), are generally pronounced with slightly more friction than usual, but not enough to qualify them as even halfway to fricative.
+The bilabial approximant w patterns oddly: it appears only to labialize other consonants (except for ejectives, nasals, and r̥/r).
+It has no voicing feature of its own (it assimilates voice to whatever consonant is nearest).
+Admittedly, it may be better to analyze it not as a phoneme, but instead to give a labialized version of most phonemes, but at that point we've sacrificed an approachable presentation while running ashore of phonemic vs featural theory.
+I'm quite happy to say the language has 58 phonemes instead of 34+ʷ.
+
+In the design of the liquids, I saw that many languages, even with massive consonant inventories, only have r l j w h.
+In my case, I knew I wanted two rhotics because Junen Rha, Chechen, and Czech all do, and I already had four laterals.
+I'm still chasing the pronounciation of Czech r, so some of that may yet enter the language: perhaps /r̝̊/?
+
+About h, I see a lot of languages use h and friends as replacements for x and friends.
+Only a few (Kabardian, Chechen, Shixing, and Arabic in my quick search) seem to have a well-developed, independent ecosystem of radical consonants --- even fewer that click languages.
+Given that Ukrainian doesn't have h, I'm not a fan of debuccalization, and I'm even less attached to the glottal stop in this language, I decided against any glottals.
+On the other hand, I did still want a kind of coda h sound, but I think I'm going to get that from my voiceless liquids.
+
+
+
+
+
+
+What's wrong with Russian vowels?
+I'll go with them, even though Ukrainian has ɪ in place of ɨ, since I want to get better at ɨ, and don't really want to reinforce the i/ɪ separation that seems to come up a lot in my conlanging thought process.
+
+TODO:
+I think whispered vowels aren't going to be a thing.
+If they were going to be there, the consonant clusters would get all the more pronounced by their deletion.
+Perhaps a bit of "umlaut" could be left behind by these whispered/deleted vowels which could get noticed in the inflectional morphology.
+
+TODO:
+I'm being pulled in two different directions for allophony for a.
+I'd like e, æ (French-ish a), and ə, but the ways I'm thinking of getting them are ɛ~e, a~ə, and a~æ.
+Really, it's that I want fronting umlaut and raising umlaut, but having both is too much.
+One option I've got is fronting back vowels immediately after palatal consonants only and ignoring any harmony considerations; that could lead to front rounded sounds, which I'm not sure I really want, not without trying some words.
+That still leaves the question of ɛ~e open, though.
+Maybe merely ɛ > e in stressed syllables?
+I still don't have schwa, but is that such a loss?, or I could get it back in unstressed open syllables at the end of prosodic words.
+
+TODO contrastive hierarchy 
+
+
+
+
+Stress is marked primarily with length.
+It is fixed to the first syllable; secondary stress falls every other syllable.
+TODO: Now, the thing is, if I have prefixes, should the stress move?
+If it does shift, could that undo old stress-conditioned sound changes or bring back old unstress-conditioned changes?
+TODO: poetry might be affected by historical syllables (deleted vowels still count towards syllable counts), or I might say the "poetical" "tradition" is novel and so uses just that current form of the language.
+

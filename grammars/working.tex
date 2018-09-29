@@ -1,0 +1,278 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8
+
+\documentclass[12pt]{book} % use larger type; default would be 10pt
+
+\usepackage{fontspec} % Font selection for XeLaTeX; see fontspec.pdf for documentation
+%\defaultfontfeatures{Mapping=tex-text} % to support TeX conventions like ``---''
+%\usepackage{xunicode} % Unicode support for LaTeX character names (accents, European chars, etc)
+%\usepackage{xltxtra} % Extra customizations for XeLaTeX
+
+\setmainfont{CJunicode} % set the main body font (\textrm), assumes Charis SIL is installed
+%\setsansfont{Deja Vu Sans}
+%\setmonofont{Deja Vu Mono}
+
+% other LaTeX packages.....
+\usepackage{geometry}
+\geometry{letterpaper} % or a4paper (US) or a5paper or....
+%\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+
+\usepackage{float}
+\usepackage{subcaption}
+
+
+
+
+
+\title{Utsišcy (utsiʃkɛ) \\ {\Large Draft Grammar}}
+\author{Okuno Zankoku}
+%\date{} % Activate to display a given date or no date (if empty),
+         % otherwise the current date is printed 
+
+\begin{document}
+\maketitle
+
+\chapter{Demography and Ethnography}
+So, what is this language, Utsišcy?
+
+It's certainly an art language, as its only purpose is my enjoyment and hopefully someone else's as well.
+If I describe it as a naturalistic language, that's because I think the assymmetries of natural languages are aesthetically pleasing in a wabi-sabi sort of way.
+I've spared little thought for relative infrequencies of the various features I've chosen to include in preference to what I find fun, as long as the result is ``harmonious''.
+
+Many naturalistic artlangs are also embedded in a conworld and come with a conculture, but that's not what I'm really interested in.
+This language has no conceit (as fun as they can be); it is made up by a single person, and I present it that way.
+I sometimes mention Utsišcy's ``history'' (which it doesn't have), it is only to allow me to explore the relation of some twist to the rest of the language and understand how to balance it.
+
+At the end of the day, I'm not even sure I'm conlanging: I think I'm con-ideolecting.
+
+
+
+
+
+\chapter{Sound System}
+
+\section{Phonemics}
+
+The number of phonemes available in Utsišcy varies depending on your theoretical predelictions.
+There are several clusters analyzable as affricates and most consonants may be labialized or palatalized, which quite explodes the count of consonants.
+The perspective I take is that apparently affricate, labialized, and palatalized consonants are underlyingly clusters.
+This gives 35 contoid and 6 vocoid phonemes, a large inventory even at this conservative analysis.
+
+\begin{table}[H]
+\centering
+\begin{subtable}[t]{.5\linewidth}
+	\centering
+	\begin{tabular}{ccccc}
+		\hskip 0.7em m & \hskip 0.8em n \\
+		p b & t d & c ɟ & k \\
+		\hskip 0.8em ɓ & t' ɗ & c' ʄ & k' \\
+		f v & s z & ʃ ʒ & x \\
+		& \hskip 0.8em s' & \hskip 0.8em ʃ\,' & x' \\
+		& r̥ r & & & ʀ \\
+		& l̥ l & ʎ̥ ʎ \\
+		W && j̊ j \\
+	\end{tabular}
+	\caption{contoids}\label{t:phoneme-contoids}
+\end{subtable}
+\hskip -6em
+\begin{subtable}[t]{.5\linewidth}
+	\centering
+	\begin{tabular}{ccc}
+		i & ɨ u \\
+		ɛ & a ɔ \\
+	\end{tabular}
+	\caption{vocoids}\label{t:phoneme-vocoids}
+\end{subtable}
+\caption{Phoneme Intentory}\label{t:phonemes}
+\end{table}
+
+Several consistently distinctive features support the inventory size.
+First, stops have four voicings in most places: unvoiced, voiced, ejective, and implosive; the only exceptions are the cross-linguistically common gaps /p', g, ɠ/.
+Likewise, fricatives have three voicings in most places: unvoiced, voiced, and ejective.
+The presence of ejective fricatives is unusual, but the gaps in fricatives /f', ɣ/ are also common.
+
+Second, there is a distinction between palatals and velars.
+Historically, this was a distinction between velar and uvular contoids which underwent fronting.
+This brings some sanity to the appearance of a /ʄ/ < */k'/ phoneme without a corresponding */k'/ < **/q'/.
+
+Third, Utsišcy consistently distinguishes between voiced and unvoiced variants of liquids /r̥, l̥, ʎ̥, j̊/ vs. /r, l, ʎ, j/.
+The only exception is /W/ which is underspecified w.r.t. voicing.
+In fact, /W/ might be analyzed as a ``bound phoneme'', i.e. it only appears in order to labialize another consonant (TODO: maybe to diphthongize a vowel, I haven't decided if I want to concede anything to diphthongs).
+In this capacity, it takes on the voice of whatever contoid to which it is adjacent.
+
+A careful reader may note the presence of three trills, but it should be noted that only /r̥, r/ pattern as rhotics; /ʀ/ < */ʁ/, and so patterns as a voiced fricative (TODO and probably also has [ʁ] as an allophone).
+
+In comparison to the contoids, the vocoid system is reserved.
+It is similar to the Russian vocoid system: a simple /i, e, a, o, u/ with a center-high vowel /ɨ/.
+
+\subsection{TODO Contrastive Hierarchy}
+
+As suggested by chart \ref{t:phoneme-vocoids}, the constrastive hierarchy for vocoids distinguishes high/low, front/back, and in the back vocoids unround/round.
+Clearly, [+round] is marked, and [high/low], [front/back] > [round].
+However, it is not clear which of high/low is marked, or which of front/back is marked, or which of those two distinctions are primary.
+
+I'm just collecting some things I've noticed about contoids:
+\begin{itemize}
+\item Before trying to create a hierarchy, I should probably note the features that each phoneme even has first.
+\item probably [labial/lingual] > [coronal/dorsal] > [velar/palatal]
+\item  I think I must have [labial] > voicing, since /W/ doesn't have voicing; likely also [obstruent] > voicing as well
+\end{itemize}
+
+
+
+
+
+\section{Orthography}
+
+Utsišcy's orthographies are mostly one-to-one phonemic, therefore I've decided to explain them here.
+Utsišcy has both a romanization and a cyrillization.
+Further, there is an ``asciization''---using only the glyphs of the ASCII character set---for use when diacritics are cumbersome or impossible to input to a computer system.
+
+The non-phonemic exceptions in orthography capture regular phonetic processes in a way that is consistent with the script in use.
+The phonemes /l̥, ʎ̥/, normally spelled «lh, llh» drop the <<-h>> when the phonetic context would imply they mjust be unvoiced.
+
+There are a few special aesthetic considerations also.
+In particular, /tʃ, cʃ/ clusters normally present as [tʃ], and so share the spelling «cš».
+Additionally, the cyrillization leverages existing characters «ц, ч» for the clusters /ts/, [tʃ] since doing otherwise would read as highly unusual to anyone already familiar with cyrillic script.
+The romanization does not use «q» or «qu» for /kʷ/ however.
+
+
+TODO: if /j/ is going to attach to contoids, say as in /njɛt/, I'm not sure I want it spelled «nget», though that might be quirky/shibbolethy enough to be fun.
+Further, using «w» just seems heavyweight to me. How could I get away writing /ʃʷatʃ/ not as «swacš», but as «suacš», «svacš», or something without compromising consonant clusters or not-diphthongs?
+«ng̊et» and «sv̊acš»?
+
+TODO when do I use capitalization?
+
+\begin{table}[H]
+\centering
+\begin{subtable}[t]{.5\linewidth}
+	\centering
+	\begin{tabular}{ccccc}
+		\hskip 0.7em m & \hskip 0.8em n \\
+		p b & t d & c j & k \\
+		\hskip 0.8em b' & t' d' & c' j' & k' \\
+		f v & s z & š ž & x \\
+		& \hskip 0.8em s' & \hskip 0.8em š' & x' \\
+		& ř r & & & x̌ \\
+		& lh l & ļ ļh \\
+		w && ç g \\
+	\end{tabular}
+	\caption{consonants}\label{t:roman-consonants}
+\end{subtable}
+\hskip -6em
+\begin{subtable}[t]{.5\linewidth}
+	\centering
+	\begin{tabular}{ccc}
+		i & y u \\
+		e & a o \\
+	\end{tabular}
+	\caption{vowels}\label{t:roman-vowels}
+\end{subtable}
+
+\begin{subtable}[t]{.5\linewidth}
+	\centering
+	\begin{tabular}{rc @{\hskip 3em} rc}
+		tʃ & cš					&	tʃ\,' & cš' \\
+		dʒ & ǰ \\
+		C[-voice]l̥ & Cl̥		&	C[-voice]ʎ̥ & Cll \\
+	\end{tabular}
+	\caption{clusters (TODO)}\label{t:roman-clusters}
+\end{subtable}
+\caption{Romanization}\label{t:romanization}
+\end{table}
+
+
+\begin{table}[H]
+\centering
+\begin{subtable}[t]{.5\linewidth}
+	\centering
+	\begin{tabular}{ccccc}
+		\hskip 0.7em m & \hskip 0.8em n \\
+		p b & t d & c j & k \\
+		\hskip 0.8em b' & t' d' & c' j' & k' \\
+		f v & s z & sh zh & x \\
+		& \hskip 0.8em s' & \hskip 1.2em sh' & x' \\
+		& rh r & & & xh \\
+		& lh l & llh ll \\
+		w && ch g \\
+	\end{tabular}
+	\caption{consonants}\label{t:ascii-consonants}
+\end{subtable}
+\hskip -6em
+\begin{subtable}[t]{.5\linewidth}
+	\centering
+	\begin{tabular}{ccc}
+		i & y u \\
+		e & a o \\
+	\end{tabular}
+	\caption{vowels}\label{t:ascii-vowels}
+\end{subtable}
+
+TODO notes on the odd character choices (j, g, ç, x̌, ř).
+TODO comment on cedilla vs. comma below in unicode.
+
+
+\begin{subtable}[t]{.5\linewidth}
+	\centering
+	\begin{tabular}{rc @{\hskip 3em} rc}
+		tʃ & csh		&	tʃ\,' & csh' \\
+	\end{tabular}
+	\caption{clusters (TODO)}\label{t:ascii-clusters}
+\end{subtable}
+\caption{Asciization}\label{t:asciization}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{subtable}[t]{.5\linewidth}
+	\centering
+	\begin{tabular}{ccccc}
+		\hskip 0.7em м & \hskip 0.8em н \\
+		п б & т д & ть дь & к \\
+		\hskip 0.8em бӏ & тӏ дӏ & тьӏ дьӏ & кӏ \\
+		ф в & с з & ш ж & х \\
+		& сӏ \hskip 0.8em & шӏ \hskip 0.8em & хӏ \\
+		& рхӏ р & & & гӏ \\
+		& лхӏ л & лхӏь ль \\
+		оъ && йхӏ й \\
+	\end{tabular}
+	\caption{consonants}\label{t:cyrillic-consonants}
+\end{subtable}
+\hskip -6em
+\begin{subtable}[t]{.5\linewidth}
+	\centering
+	\begin{tabular}{ccc}
+		и & і у \\
+		е & а о \\
+	\end{tabular}
+	\caption{vowels}\label{t:cyrillic-vowels}
+\end{subtable}
+
+\begin{subtable}[t]{.5\linewidth}
+	\centering
+	\begin{tabular}{rc @{\hskip 3em} rc}
+		ts & ц		&	ts' & цъ \\
+		tʃ & ч		&	tʃ\,' & чъ \\
+	\end{tabular}
+	\caption{clusters (TODO)}\label{t:cyrillic-clusters}
+\end{subtable}
+\caption{Cyrillization (FIXME: tentative)}\label{t:cyrillization}
+\end{table}
+
+In the Cyrillization, probably replace yer (ъ) with palochka (ӏ), dependent on fonts (it's look a lot better than дьъ...).
+I'm not sure about using «г» for /ʀ/.
+Perhaps љ in place of ль.
+I want ҋ in place of йхӏ: it's so much easier to read.
+I know some language uses рхӏ exactly as I am here, but transporting that convension to the other liquids, though consistent, makes for some ugly n-graphs.
+It's a bit extreme to use a digraph оъ for a labialization phoneme.
+
+
+
+
+
+
+
+\end{document}
