@@ -1,6 +1,14 @@
 Phonotactics
 
 
+.______    _______    .______     ______    __       _______
+|   _  \  |   ____|   |   _  \   /  __  \  |  |     |       \
+|  |_)  | |  |__      |  |_)  | |  |  |  | |  |     |  .--.  |
+|   _  <  |   __|     |   _  <  |  |  |  | |  |     |  |  |  |
+|  |_)  | |  |____    |  |_)  | |  `--'  | |  `----.|  '--'  |
+|______/  |_______|   |______/   \______/  |_______||_______/
+
+
 Voiceless non-rhotic liquid at the start of a word? Probably gets voiced.
 
 Coronals are probably dental wherever they constrast with palatals.
@@ -17,3 +25,36 @@ Though, this might also apply for some [affricate]V[obstruent] sequences, obtain
 
 Adjacent stops are disallowed.
 If the do come together morphologically, then the first stop is lenited to the corresponding fricative.
+
+`[+stop, +palatal] > [-palatal] / {ʃ,ʒ,ʃ'}`.
+E.g. `c > k / ʃ_` and `{c,ɟ} > g / ʒ_`.
+In fact, I may have the distinction b/t palatal and velar disappear in several contexts.
+However, /ʃ/&c really do stay [ʃ]: they were presumably the pioneers of the dorsal fronting.
+I guess that only leaves the stops (I'm thinking ʎ wasn't ʟ, but we'll see).
+
+The space for voiced velar stops is available, so I should expect ɟ~g and k~g, at least in context.
+If regularity of voicing distinctions kicks back in mentally, then the absence of /g/ might be an accident and still exist in loanwords (in isolation: voicing alternations could make it devoice anyway).
+Similarly for /p', f'/, but what loanwords will those be in‽
+Since /ʀ/ still patterns as ʁ and presumably now shares space with ɣ, I don't think those phonemic spaces will be available for loans.
+
+The unvoiced stops are phonetically aspirated, though the feature is not contrastive.
+I get the feeling that this is because unaspriated stops became implosive.
+This is following the analysis of non-explosive stops as being marked by not having a positive pressure buildup.
+See ["Explosives, Implosives, and Nonexplosives: the Linguistic Function of Air Pressure Differences in Stops" by George N. Clements](http://nickclements.free.fr/publications/2002a.pdf).
+Presumably, aspirated stops are characterized by a larger pressure buildup than unaspirated, and those features could shift to have the bias ("center of pressure buildup") be more neutral.
+I.e. both kinds of stops have lost some pressure, but current implosives are still characterized by having a lower pressure than unvoiced stops.
+From this, I expect word-final stops are aspirated for unvoiced, but unaspirated & devoiced for voiced.
+
+Since /ʀ/ could be difficult in some circumstances or for some speakers, I'll let ʀ~ʁ.
+I'm not sure if it should be pure free alternation, or if there's also some conditioned cases where the trill sounds like overdoing it.
+Well, rapid speach has a habit of leniting trills, so...
+
+
+TODO:
+I'm being pulled in two different directions for allophony for a.
+I'd like e, æ (French-ish a), and ə, but the ways I'm thinking of getting them are ɛ~e, a~ə, and a~æ.
+Really, it's that I want fronting umlaut and raising umlaut, but having both is too much.
+One option I've got is fronting back vowels immediately after palatal consonants only and ignoring any harmony considerations; that could lead to front rounded sounds, which I'm not sure I really want, not without trying some words.
+That still leaves the question of ɛ~e open, though.
+Maybe merely ɛ > e in stressed syllables?
+I still don't have schwa, but is that such a loss?, or I could get it back in unstressed open syllables at the end of prosodic words.
