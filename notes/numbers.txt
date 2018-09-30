@@ -1,0 +1,17 @@
+Dozenal is nice, but I do like having a factor of 5 also.
+I'll have to think about secondary bases.
+I guess something to think about here is subitizing chunks of quantity.
+Some options: long hundred, a variant on bi-quinary like hex-quinary, but maybe 10-ness is too English?
+
+For large numbers, the nth group is of `base^(k^n+k)`.
+See Donald Knuth's -yllion proposal.
+Oh, and heredetary base-n is just cool; could it be worked in?
+
+I like the -plex suffix.
+Would there also be modifiers for taking logs or roots of the base number?
+
+A base-2-based system for compuing is useful to have alongside everyday number groupings.
+
+I should figure out how to use signed digits repreentations t ospeed up arithmetic.
+Then I'll see if I want it ni.
+
