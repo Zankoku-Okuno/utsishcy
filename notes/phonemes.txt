@@ -67,3 +67,13 @@ Unstressed inter-obstruent vowels before a stressed syllable are devoiced, then 
 Do I want to occaisionally have a word keep its lexical stress, or is that just kitchen-sinking?
 
 jW > [ɥ]
+
+----
+
+wow: when I got to doing my contrastive hierarchy, I discoverd I _do_ have semivowels /◌ʷ,◌ʲ/ and /◌ʲ/ constrasts with /j/!
+
+I faced a decision with marking back or front vowels.
+I decided to go with back as marked: fronting happened in the dorsal consonants, so I guess the tongue posture moved forward.
+Importantly, with back and high both marked, I know the tongue posture is likely to be front and low.
+This also makes it easier to pronounce /a/ as in French just as a matter of normalcy.
+Hey, since labial is marked, I can also have the default lip posture be more tense than protruded.

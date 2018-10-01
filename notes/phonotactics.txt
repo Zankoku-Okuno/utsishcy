@@ -58,3 +58,24 @@ One option I've got is fronting back vowels immediately after palatal consonants
 That still leaves the question of ɛ~e open, though.
 Maybe merely ɛ > e in stressed syllables?
 I still don't have schwa, but is that such a loss?, or I could get it back in unstressed open syllables at the end of prosodic words.
+
+Just playing around with the sounds, I'm thinking about ɨ→ə, but on looking up that process, it seems a bit uncommon.
+Many changes in Index Diachronica take ɨ→i,e.
+On PBase, just under 5% of changes from ɨ end up at ə, and all those rules seem to be reducing a ton of vowels indiscriminately.
+Nevertheless: BE BOLD!
+There's nothing ɨ→ɘ in PBase, but I think that makes sense in my phonology (better than →ə).
+`{i,ɨ,u}→{ɪ~e,ɘ,ʊ} / unstressed+open syllables`
+perhaps also modified by back consonants in onset
+
+Palatal consonants and back rounded vowels are going to interact.
+My first instinct is to back palatals to velars after rounded vowels; perhaps before is better, maybe both?
+
+/l/ is never velarized ("dark")
+
+QUESTION: allow Cwj/Cjw? I think yes, because it's fun to have /tʷʲ/ [tɥ̊].
+
+To practice my accent, I should put a full double length on stressed syllables.
+That is probably correct for careful speach, but natural speach will surely have it closer to one-and-a-half length.
+
+I expect /ɛ/ to be most likely to be used in an ``um'' paramorpheme, followed by /a, i/.
+I've decided this based on Japanese ``ano'', ``edo''; nothing fancy, just the one language I know how to translate English ``um'' into.

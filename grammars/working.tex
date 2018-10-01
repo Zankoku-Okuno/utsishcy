@@ -8,9 +8,13 @@
 %\usepackage{xunicode} % Unicode support for LaTeX character names (accents, European chars, etc)
 %\usepackage{xltxtra} % Extra customizations for XeLaTeX
 
-\setmainfont{CJunicode} % set the main body font (\textrm), assumes Charis SIL is installed
+\setmainfont[Numbers=OldStyle]{CJunicode} % set the main body font (\textrm), assumes Charis SIL is installed
 %\setsansfont{Deja Vu Sans}
 %\setmonofont{Deja Vu Mono}
+
+\usepackage{scalefnt}
+\newcommand{\mathipa}[1]{\textrm{\scalefont{1.08}\selectfont #1}} % scaled to 1.1 also seems ok
+
 
 % other LaTeX packages.....
 \usepackage{geometry}
@@ -23,17 +27,22 @@
 \usepackage{float}
 \usepackage{subcaption}
 
+\usepackage{qtree}
+\usepackage{mathtools}
 
 
 
-
-\title{Utsišcy (utsiʃkɛ) \\ {\Large Draft Grammar}}
+\title{Utsišcy /ˈutsiʃkɨ/ \\ {\Large Draft Grammar}}
 \author{Okuno Zankoku}
 %\date{} % Activate to display a given date or no date (if empty),
          % otherwise the current date is printed 
 
 \begin{document}
 \maketitle
+
+
+
+
 
 \chapter{Demography and Ethnography}
 So, what is this language, Utsišcy?
@@ -61,9 +70,9 @@ There are several clusters analyzable as affricates and most consonants may be l
 The perspective I take is that apparently affricate, labialized, and palatalized consonants are underlyingly clusters.
 This gives 35 contoid and 6 vocoid phonemes, a large inventory even at this conservative analysis.
 
-\begin{table}[H]
+\begin{figure}[H]
 \centering
-\begin{subtable}[t]{.5\linewidth}
+\begin{subtable}[t]{0.5\linewidth}
 	\centering
 	\begin{tabular}{ccccc}
 		\hskip 0.7em m & \hskip 0.8em n \\
@@ -78,7 +87,7 @@ This gives 35 contoid and 6 vocoid phonemes, a large inventory even at this cons
 	\caption{contoids}\label{t:phoneme-contoids}
 \end{subtable}
 \hskip -6em
-\begin{subtable}[t]{.5\linewidth}
+\begin{subtable}[t]{0.5\linewidth}
 	\centering
 	\begin{tabular}{ccc}
 		i & ɨ u \\
@@ -87,7 +96,7 @@ This gives 35 contoid and 6 vocoid phonemes, a large inventory even at this cons
 	\caption{vocoids}\label{t:phoneme-vocoids}
 \end{subtable}
 \caption{Phoneme Intentory}\label{t:phonemes}
-\end{table}
+\end{figure}
 
 Several consistently distinctive features support the inventory size.
 First, stops have four voicings in most places: unvoiced, voiced, ejective, and implosive; the only exceptions are the cross-linguistically common gaps /p', g, ɠ/.
@@ -108,20 +117,254 @@ A careful reader may note the presence of three trills, but it should be noted t
 In comparison to the contoids, the vocoid system is reserved.
 It is similar to the Russian vocoid system: a simple /i, e, a, o, u/ with a center-high vowel /ɨ/.
 
-\subsection{TODO Contrastive Hierarchy}
+\subsection{TODO Featural Analysis}
 
-As suggested by chart \ref{t:phoneme-vocoids}, the constrastive hierarchy for vocoids distinguishes high/low, front/back, and in the back vocoids unround/round.
-Clearly, [+round] is marked, and [high/low], [front/back] > [round].
-However, it is not clear which of high/low is marked, or which of front/back is marked, or which of those two distinctions are primary.
+TODO list and describe distinctive features
 
-I'm just collecting some things I've noticed about contoids:
-\begin{itemize}
-\item Before trying to create a hierarchy, I should probably note the features that each phoneme even has first.
-\item probably [labial/lingual] > [coronal/dorsal] > [velar/palatal]
-\item  I think I must have [labial] > voicing, since /W/ doesn't have voicing; likely also [obstruent] > voicing as well
-\end{itemize}
+\subsubsection{Contrastive Hierarchy}
+
+Given that Utsišcy have very many vocoids, I've split the hierarchy into figs.\ \ref{fig:contrast-hier-top}--\ref{fig:contrast-hier-continuants}.
+The hierarchy begins in fig.\ \ref{fig:contrast-hier-top}, which then will direct you to the figures for subhierarchies.
+Marked values are consistently given with as ``+'' and branch to the left.
+
+\begin{figure}[H]
+\centering
+\Tree [
+	[.+contoid
+		\qroof{\small Fig.\ \ref{fig:contrast-hier-sonorants}}.+sonorant
+		[.-sonorant
+			\qroof{\small Fig.\ \ref{fig:contrast-hier-continuants}}.+continuant
+			\qroof{\small Fig.\ \ref{fig:contrast-hier-stops}}.-continuant
+		]
+	]
+	[.-contoid
+		[.+obstruent
+			[.{\footnotesize +labial} ◌ʷ ]
+			[.{\footnotesize -labial} ◌ʲ ]
+		]
+		\qroof{\small Fig.\ \ref{fig:contrast-hier-vowels}}.-obstruent
+	]
+]
+\caption{Contrastive Hierarchy}\label{fig:contrast-hier-top}
+\end{figure}
+
+Even a cursory inspection of the top level of the hierarchy shows that the inventory is light on vocoids and heavy on non-sonorant contoids.
+Note that the non-sonorant vocoids /◌ʷ, ◌ʲ/ appear here; as they are a small category, their ink on the page is easily overlooked.
+Although the contraints of the tree have forced me to imply one of \{contoid,~vocoid\} is marked, it's not entirely clear which should be.
+Since the [sonorant] is natural for vocoids, but marked for contoids, we've used both [sonorant] and [obstruent] features, but these are simple antonyms of each other.
+
+\begin{figure}[H]
+\centering
+\Tree [.{-contoid, +sonorant}
+	[.{\footnotesize +high}
+		[.{\footnotesize +back}
+			[.{\scriptsize +round} u ]
+			[.{\scriptsize -round} ɨ ]
+		]
+		[.{\footnotesize -back} i ]
+	]
+	[.{\footnotesize -high}
+		[.{\footnotesize +back}
+			[.{\scriptsize +round} ɔ ]
+			[.{\scriptsize -round} a ]
+		]
+		[.{\footnotesize -back} ɛ ]
+	]
+]
+\caption{Contrasive Hierarchy: vowels}\label{fig:contrast-hier-vowels}
+\end{figure}
+
+As suggested by fig. \ref{t:phoneme-vocoids}, vowels are organized into a 2$\times$2 space with an additional rounding contrast only in the back vowels.
+Although it is not clear from phnological processes, tongue posture sugggests [high, back] are marked.\footnote{FIXME: Is this actually a thing? My guess is that there hasn't been enough research into the intersection of contrastive hierarchy and mouth posture to say; annoyingly, I don't think there's much research into mouth posture at all, except to inform accent training.}
+Though I've had to decide on an order to draw the tree, given the symmetry between the two features it is likely that [high] $\sim$ [back] rather than one taking a higher spot than the other.
+
+\begin{figure}[H]
+\centering
+\Tree [.{+contoid, -sonorant, -continuant} 
+	[.{\footnotesize +labial}
+		[.{\scriptsize +nonplosive} ɓ ] !\qsetw{1cm}
+		[
+			[.{\scriptsize +gc} ◌ ] !\qsetw{0.5cm}
+			[
+				[.{\scriptsize +voice} b ] !\qsetw{0.7cm}
+				[ p ] !\qsetw{0.5cm}
+			]
+		]
+	]
+	[
+		[.{\footnotesize +dorsal}
+			[.{\footnotesize +velar} 
+				[.{\scriptsize +nonplosive} ◌ ] !\qsetw{1.1cm}
+				[
+					[.{\scriptsize +gc} k' ] !\qsetw{0.5cm}
+					[ k ] !\qsetw{0.5cm}
+				]
+			]
+			[.{\footnotesize -velar}
+				[.{\scriptsize +nonplosive} ʄ ] !\qsetw{1cm}
+				[
+					[.{\scriptsize  +gc} c' ] !\qsetw{0.5cm}
+					[
+						[.{\scriptsize +voice} ɟ ] !\qsetw{0.7cm}
+						[ c ] !\qsetw{0.5cm}
+					]
+				]
+			]
+		]
+		[.{\footnotesize -dorsal}
+			[.{\footnotesize +nonplosive} ɗ ] !\qsetw{1.5cm}
+			[.{\footnotesize -nonplosive}
+				[.{\footnotesize +gc} t' ]
+				[.{\footnotesize -gc}
+					[.{\footnotesize +voice} d ]
+					[.{\footnotesize -voice} t ]
+				]
+			]
+		]
+	]
+]
+\caption{Contrastive Hierarchy: stops}\label{fig:contrast-hier-stops}
+\end{figure}
+
+In the stops (fig.\ \ref{fig:contrast-hier-stops}), I've compressed or elided many of the featural labels due to the number of phonemes.
+The coronals (on the far right) have all the labels explicitly given; this pattern is replicated in the labials, velars, and palatals.
+Some possible phonemes (*/p',~ɠ/) have been given as ``◌'' (empty): these do not appear in native words, but are never allophones of other phonemes.
+Presumably these unattested phonemes could appear in loanwords\footnote{but where is Utsišcy going to borrow */p', ɠ/ from?}.
+One exception to the pattern occurs in the velars.
+Although a voicing difference is to be expected between /k/ and */ɡ/, it does not occur.
+I can't postulate an empty space here because /k/ is commonly realized as [ɡ].
+
+Note that my analysis of the implosives (/ɓ,~ɗ,~ɟ/) is that they are [-continuant, +nonplosive] or, using more familiar names, [+stop, -plosive].
+Although this might seem to be a contradictory analysis, I'm following Clements' paper ``Explosives, Implosives, and Nonexplosives: the Linguistic Function of Air Pressure Differences in Stops''.
+There he analyzes implosives as [+stop, -obstruent], but given his definition of obstruence (positive air pressure) is slightly unfamiliar, I've opted to use a new term [plosive].
+This is in keeping with the more accessible prose (esp. the title and abstract, which use ``non-explosive'' repeatedly), though I've stripped off the ``ex-'' prefix.
+Unfortunately, my convention now distinguishes ``stop'' and ``plosive'', even though they are commonly synonymous; be aware.
+
+\begin{figure}[H]
+\centering
+\Tree [.{+contoid, -sonorant, +continuant}
+[.{\footnotesize +labial}
+		[.{\scriptsize +gc} ◌ ] !\qsetw{0.5cm}
+		[
+			[.{\scriptsize +voice} v ] !\qsetw{0.7cm}
+			[ f ] !\qsetw{0.5cm}
+		]
+	]
+	[
+		[.{\footnotesize +dorsal}
+			[.{\footnotesize -dorsal}
+				[.{\scriptsize +gc} x' ] !\qsetw{0.5cm}
+				[
+					[.{\scriptsize +voice} ʀ ] !\qsetw{0.7cm}
+					[ x ] !\qsetw{0.5cm}
+				]
+			]
+			[.{\footnotesize -velar}
+				[.{\scriptsize +gc} ʃ' ] !\qsetw{0.5cm}
+				[
+					[.{\scriptsize +voice} ʒ ] !\qsetw{0.7cm}
+					[ ʃ ] !\qsetw{0.5cm}
+				]
+			]
+		]
+		[.{\footnotesize -dorsal}
+			[.{\footnotesize +gc} s' ]
+			[.{\footnotesize -gc}
+				[.{\footnotesize +voice} z ]
+				[.{\footnotesize -voice} s ]
+			]
+		]
+	]
+]
+\caption{Contrastive Hierarchy: fricatives}\label{fig:contrast-hier-continuants}
+\end{figure}
+
+The fricatives (fig.\ \ref{fig:contrast-hier-continuants}) have nearly the same structure as the stops.
+The points of articulation are the same, and the only difference in the phonation is that fricatives lack a [plosive] feature.
+Again, there are too many phonemes to be fully explicit with feature labels, so the coronals are the only fricatives fully labelled.
+There is one more phonemic gap (*/f'/) which behaves the same as the gaps in the stops.
+
+I've ordered place of articulation features (distinctive only in the obstruents) higher in the hierarchy than phonation features because phonological rules are more likely to assimilate phonation rather than place.
 
 
+\begin{figure}[H]
+\centering
+\Tree [.{+contoid, +sonorant}
+			[.{\footnotesize +nasal}
+				[.{\footnotesize +labial} m ]
+				[.{\footnotesize -labial} n ]
+			] !\qsetw{2cm}
+			[.{\footnotesize -nasal}
+				[.{\footnotesize +glide}
+					[.{\scriptsize +unvoice} j̊ ]
+					[.{\scriptsize -unvoice} j ]
+				] !\qsetw{1cm}
+				[.{\footnotesize -glide}
+					[.{\footnotesize +lateral}
+						[.{\footnotesize +palatal}
+							[.{\scriptsize +unvoice} ʎ̥ ]
+							[.{\scriptsize -unvoice} ʎ ]
+						]
+						[.{\footnotesize -palatal}
+							[.{\scriptsize +unvoice} l̥ ]
+							[.{\scriptsize -unvoice} l ]
+						]
+					]
+					[.{\footnotesize -lateral}
+						[.{\scriptsize +unvoice} r̥ ]
+						[.{\scriptsize -unvoice} r ]
+					]
+				]
+			]
+		]
+\caption{Contrastive Hierarchy: sonorant consonants}\label{fig:contrast-hier-sonorants}
+\end{figure}
+
+In my quest to only use ``+'' for marked features and ``-'' for the corresponding unmarked, I've had to make some compromises with familiarity.
+Whereas it is usual to see [±voice] but sonorants are naturally voiced, I've resorted to using [±unvoice] to distinguish /j̊,~l̥,~ʎ̥,~r̥/ from /j,~l,~ʎ,~r/ in the sonorants (fig.\ \ref{fig:contrast-hier-sonorants}).
+Nevertheless, [voice] and [unvoice] are simple antonyms; phonological processes will not distinguish them.
+The hierarchy for sonorants is otherwise straightforward.
+
+
+\subsubsection{TODO Feature Summary}
+
+TODO: come up with a list of all the features, then determine if, when a phone is given an additional feature, the phonetics can be altered.
+Further, obtain the ratio of marked to unmarked features for each phoneme.
+
+-sonsonant $\land$ +sonorant $\Leftrightarrow$ +syllabic
+
+TODO:
+About affricates: I'm not sure if they exist or not, but the could, since frication is not yet contrastive anywhere.
+The only question would be how to analyze heterorganic stop-strictive clusters.
+
+\begin{quote}
+\subsubsection{Featural Notation:}
+
+It might be useful to clarify the notational guides I'm using w.r.t. features.
+Numerous forms are in use, and I can't be bothered to choose between them or understand the finer points of their theoretical assumptions.
+I've come up with perhaps the worst coping strategy---invent my own convention with unfounded and unanalyzed assumptions---and here it is.
+
+First, a feature might be the featural category: a simple enum (a finite set of unanalyzed tokens).
+A feature might also be a featural value: a selection from a featural category.
+
+Second, I'm going to spell categories capitalized but values lowercase.
+
+Third, specifying a value from a catefory is written ``Category=value''.
+When the category can be inferred from the value (e.g. ``coronal'' only appears in ``Place''), then the category can be omitted, but not the equals sign (e.g. ``=coronal'' instead of ``Place=coronal'').
+
+Fourth, many categories thraditinoally (and in many theoretical frameworks, all categories) only have two values ``+,~-''.
+By the rules so far, I would write these as e.g. ``High=+'', which is cumbersome.
+Instead, (following the example) I select ``Height'' as the category, and ``+, -'' are synonyms for marked and unmarked respectively.
+Then, to disambiguage the ``+, -'' values of various categories, suffix the lowercase traditional name of the marked form.
+Finally, omit the equals sign.
+Thus, instead of writing ``Height=+'', one writes ``+high'' if high is the marked height or ``-low'' if lowness is marked.
+
+Note that mixing the sign convention (e.g. if highness is marked, using ``±low'') is dispreferred, as a sudden inconsistency might surprise a reader, leading them to think meta-textually.
+If on the other hand, the feature has been pointed out as having odd markedness properties, then mixing is not so bad.
+Sometimes a supposedly binary category has neutral elements markable with ``ø''; this symbol operates similarly to ``+, -''.
+However, take care to specify if this value is transparent or opaque w.r.t. phonological processes operating on the ± values.
+If there are both transparent and opaque values in a category, you'll have to make your own symbols.
+\end{quote}
 
 
 
@@ -271,7 +514,32 @@ It's a bit extreme to use a digraph оъ for a labialization phoneme.
 
 уциштьі
 
+\section{Phonetics}
 
+$$
+\begin{drcases}
+\mathipa{◌ʷʲ} \\
+\mathipa{◌ʲʷ} \\
+\end{drcases}
+\to
+\begin{cases}
+\mathipa{[ɥ̊]} & \left/ {\left( \mathipa{C} \over \mathipa{-voice} \right)} \_\right. \\
+\mathipa{[ɥ]} & \left/ {\left( \mathipa{C} \over \mathipa{+voice} \right)} \_ \right.  \\
+\end{cases}
+$$
+
+$$
+\begin{drcases}
+\mathipa{◌ʷʲ} \\
+\mathipa{◌ʲʷ} \\
+\end{drcases}
+\to
+\left[{ \mathipa{ɥ} \over \alpha\mathipa{voice} }\right]
+	\left/ {\left( \mathipa{C} \over \alpha\mathipa{voice} \right)} \_ \right.  \\
+$$
+
+The only thing, looking at these two options for typesetting rules is that $[{phone \over feature}]$ looks strange in the second.
+My perspective is that features are phonemic rather than phonetic elements, and so should not be included in phonetic [...] transcription.
 
 
 
