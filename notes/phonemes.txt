@@ -77,3 +77,5 @@ I decided to go with back as marked: fronting happened in the dorsal consonants,
 Importantly, with back and high both marked, I know the tongue posture is likely to be front and low.
 This also makes it easier to pronounce /a/ as in French just as a matter of normalcy.
 Hey, since labial is marked, I can also have the default lip posture be more tense than protruded.
+
+phonation was previously plain, aspirated, ejective; then non-obstruency became important, shifting plain to implosive and splitting aspirated into voiced and unvoiced.

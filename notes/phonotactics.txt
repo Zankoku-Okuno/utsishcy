@@ -1,6 +1,10 @@
 Phonotactics
 
 
+a liquid second-to-last in the coda moves to the end of the coda at the end of a word
+
+the coda contains at most three consonants
+
 .______    _______    .______     ______    __       _______
 |   _  \  |   ____|   |   _  \   /  __  \  |  |     |       \
 |  |_)  | |  |__      |  |_)  | |  |  |  | |  |     |  .--.  |
@@ -21,6 +25,11 @@ Vowels between voiceless fricatives were elided with compensatory voicing of the
 Therefore: fz, xz, xv...
 Not all weird onset clusters were created this way.
 Though, this might also apply for some [affricate]V[obstruent] sequences, obtaining tʃt.
+
+
+voicing assimilation is regressive rather than progressive
+
+liquids don't assimilate voicing, only stops & fricatives
 
 
 Adjacent stops are disallowed.
@@ -67,6 +76,8 @@ There's nothing ɨ→ɘ in PBase, but I think that makes sense in my phonology (
 `{i,ɨ,u}→{ɪ~e,ɘ,ʊ} / unstressed+open syllables`
 perhaps also modified by back consonants in onset
 
+even if /i/ would otherwise become [ɪ~e] (whatever I decide), it should remain [i] after phonetically [+palatal] contoids, and probably before also
+
 Palatal consonants and back rounded vowels are going to interact.
 My first instinct is to back palatals to velars after rounded vowels; perhaps before is better, maybe both?
 
@@ -79,3 +90,17 @@ That is probably correct for careful speach, but natural speach will surely have
 
 I expect /ɛ/ to be most likely to be used in an ``um'' paramorpheme, followed by /a, i/.
 I've decided this based on Japanese ``ano'', ``edo''; nothing fancy, just the one language I know how to translate English ``um'' into.
+
+
+If I'm going to do noun incorporation, that could have prosodic implications.
+Would the usual stress on the noun disappear, or would it become a secondary stress?
+I'll have to look at langs that actually have incorporation, and probably also figure out if it's really morphemic or word-and-paradigm.
+Hell, I suppose nouns could be "incorporated" but remain a separate word: it could soak up verbal inflections from the "preceding" verb.
+Of course, I'll have to leave room for me to play with it.
+
+Consecutive vowels are separated by glottal stop if the second is stressed or h if the second is unstressed.
+Then, if the second is unstressed and followed by an unvoiced consonant, that vowel is whispered.
+
+ʃ is normally laminal, but after back vowels, is becomes apical, maybe even [ʂ]
+
+nasals not allowed with obstruents in the onset
