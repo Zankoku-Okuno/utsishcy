@@ -1,9 +1,6 @@
 Phonotactics
 
 
-a liquid second-to-last in the coda moves to the end of the coda at the end of a word
-
-the coda contains at most three consonants
 
 .______    _______    .______     ______    __       _______
 |   _  \  |   ____|   |   _  \   /  __  \  |  |     |       \
@@ -13,27 +10,25 @@ the coda contains at most three consonants
 |______/  |_______|   |______/   \______/  |_______||_______/
 
 
-Voiceless non-rhotic liquid at the start of a word? Probably gets voiced.
+## phonotactic processes
 
-Coronals are probably dental wherever they constrast with palatals.
+a liquid second-to-last in the coda moves to the end of the coda at the end of a word
 
-The voiceless liquids are produced with slightly more friction than the voiced versions, but not enough to qualify then as true fricatives.
+Consecutive vowels are separated by glottal stop if the second is stressed or h if the second is unstressed.
+Then, if the second is unstressed and followed by an unvoiced consonant, that vowel is whispered.
 
-Since unvoiced/voiced was once aspirated/unaspirated, it makes quite a bit of sense to devoice final stops, but to retain clear aspiration on final unvoiced stops.
-
-Vowels between voiceless fricatives were elided with compensatory voicing of the second fricative.
-Therefore: fz, xz, xv...
-Not all weird onset clusters were created this way.
-Though, this might also apply for some [affricate]V[obstruent] sequences, obtaining tʃt.
+nasals not allowed with stops in the onset
 
 
-voicing assimilation is regressive rather than progressive
 
-liquids don't assimilate voicing, only stops & fricatives
+## allophony
 
 
-Adjacent stops are disallowed.
-If the do come together morphologically, then the first stop is lenited to the corresponding fricative.
+TODO: Palatal consonants and back rounded vowels are going to interact.
+My first instinct is to back palatals to velars after rounded vowels; perhaps before is better, maybe both?
+
+/ʃ/ is normally lamino-postalveolar, but after back vowels, is becomes apico-.
+Also, /ʃ~ç/.
 
 `[+stop, +palatal] > [-palatal] / {ʃ,ʒ,ʃ'}`.
 E.g. `c > k / ʃ_` and `{c,ɟ} > g / ʒ_`.
@@ -41,18 +36,35 @@ In fact, I may have the distinction b/t palatal and velar disappear in several c
 However, /ʃ/&c really do stay [ʃ]: they were presumably the pioneers of the dorsal fronting.
 I guess that only leaves the stops (I'm thinking ʎ wasn't ʟ, but we'll see).
 
+
+Voiceless non-rhotic liquid at the start of a word? Probably gets voiced.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Vowels between voiceless fricatives were elided with compensatory voicing of the second fricative.
+Therefore: fz, xz, xv...
+Not all weird onset clusters were created this way.
+Though, this might also apply for some [affricate]V[obstruent] sequences, obtaining tʃt.
+
+
 The space for voiced velar stops is available, so I should expect ɟ~g and k~g, at least in context.
 If regularity of voicing distinctions kicks back in mentally, then the absence of /g/ might be an accident and still exist in loanwords (in isolation: voicing alternations could make it devoice anyway).
 Similarly for /p', f'/, but what loanwords will those be in‽
 Since /ʀ/ still patterns as ʁ and presumably now shares space with ɣ, I don't think those phonemic spaces will be available for loans.
 
-The unvoiced stops are phonetically aspirated, though the feature is not contrastive.
-I get the feeling that this is because unaspriated stops became implosive.
-This is following the analysis of non-explosive stops as being marked by not having a positive pressure buildup.
-See ["Explosives, Implosives, and Nonexplosives: the Linguistic Function of Air Pressure Differences in Stops" by George N. Clements](http://nickclements.free.fr/publications/2002a.pdf).
-Presumably, aspirated stops are characterized by a larger pressure buildup than unaspirated, and those features could shift to have the bias ("center of pressure buildup") be more neutral.
-I.e. both kinds of stops have lost some pressure, but current implosives are still characterized by having a lower pressure than unvoiced stops.
-From this, I expect word-final stops are aspirated for unvoiced, but unaspirated & devoiced for voiced.
 
 Since /ʀ/ could be difficult in some circumstances or for some speakers, I'll let ʀ~ʁ.
 I'm not sure if it should be pure free alternation, or if there's also some conditioned cases where the trill sounds like overdoing it.
@@ -68,39 +80,18 @@ That still leaves the question of ɛ~e open, though.
 Maybe merely ɛ > e in stressed syllables?
 I still don't have schwa, but is that such a loss?, or I could get it back in unstressed open syllables at the end of prosodic words.
 
-Just playing around with the sounds, I'm thinking about ɨ→ə, but on looking up that process, it seems a bit uncommon.
-Many changes in Index Diachronica take ɨ→i,e.
-On PBase, just under 5% of changes from ɨ end up at ə, and all those rules seem to be reducing a ton of vowels indiscriminately.
-Nevertheless: BE BOLD!
-There's nothing ɨ→ɘ in PBase, but I think that makes sense in my phonology (better than →ə).
-`{i,ɨ,u}→{ɪ~e,ɘ,ʊ} / unstressed+open syllables`
-perhaps also modified by back consonants in onset
-
-even if /i/ would otherwise become [ɪ~e] (whatever I decide), it should remain [i] after phonetically [+palatal] contoids, and probably before also
-
-Palatal consonants and back rounded vowels are going to interact.
-My first instinct is to back palatals to velars after rounded vowels; perhaps before is better, maybe both?
-
-/l/ is never velarized ("dark")
-
-QUESTION: allow Cwj/Cjw? I think yes, because it's fun to have /tʷʲ/ [tɥ̊].
-
-To practice my accent, I should put a full double length on stressed syllables.
-That is probably correct for careful speach, but natural speach will surely have it closer to one-and-a-half length.
 
 I expect /ɛ/ to be most likely to be used in an ``um'' paramorpheme, followed by /a, i/.
 I've decided this based on Japanese ``ano'', ``edo''; nothing fancy, just the one language I know how to translate English ``um'' into.
 
 
-If I'm going to do noun incorporation, that could have prosodic implications.
-Would the usual stress on the noun disappear, or would it become a secondary stress?
-I'll have to look at langs that actually have incorporation, and probably also figure out if it's really morphemic or word-and-paradigm.
-Hell, I suppose nouns could be "incorporated" but remain a separate word: it could soak up verbal inflections from the "preceding" verb.
-Of course, I'll have to leave room for me to play with it.
 
-Consecutive vowels are separated by glottal stop if the second is stressed or h if the second is unstressed.
-Then, if the second is unstressed and followed by an unvoiced consonant, that vowel is whispered.
 
-ʃ is normally laminal, but after back vowels, is becomes apical, maybe even [ʂ]
 
-nasals not allowed with obstruents in the onset
+
+
+Just playing around with the sounds, I'm thinking about ɨ→ə, but on looking up that process, it seems a bit uncommon.
+Many changes in Index Diachronica take ɨ→i,e.
+On PBase, just under 5% of changes from ɨ end up at ə, and all those rules seem to be reducing a ton of vowels indiscriminately.
+There's nothing ɨ→ɘ in PBase, but I think that makes sense in my phonology (better than →ə).
+Nevertheless: BE BOLD!

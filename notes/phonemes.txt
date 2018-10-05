@@ -1,3 +1,13 @@
+m n
+p b ɓ  t d t' ɗ  c ɟ c' ʄ  k k'
+f v  s z s'  ʃ ʒ ʃ' x x'
+r̥ r ʀ  l̥ l  ʎ̥ ʎ  j̊ j
+◌ʲ ◌ʷ
+i  ɨ u
+ɛ  a ɔ
+
+
+
 Rationalizations
 
 TODO: investigate the uses of voiceless laterals in natlangs more
@@ -61,12 +71,19 @@ TODO: Now, the thing is, if I have prefixes, should the stress move?
 If it does shift, could that undo old stress-conditioned sound changes or bring back old unstress-conditioned changes?
 TODO: poetry might be affected by historical syllables (deleted vowels still count towards syllable counts), or I might say the "poetical" "tradition" is novel and so uses just that current form of the language.
 
+To practice my accent, I should put a full double length on stressed syllables.
+That is probably correct for careful speach, but natural speach will surely have it closer to one-and-a-half length.
+
 I'm trying to think how (if many clusters with plosives, fricatives, and affricates came from vowel deletion) to maintain _some_ vowels between these sounds.
 If the vowel deletion were conditioned by lexical stress, that could prevent the cluster apocalypse.
 Unstressed inter-obstruent vowels before a stressed syllable are devoiced, then deleted?
 Do I want to occaisionally have a word keep its lexical stress, or is that just kitchen-sinking?
 
-jW > [ɥ]
+If I'm going to do noun incorporation, that could have prosodic implications.
+Would the usual stress on the noun disappear, or would it become a secondary stress?
+I'll have to look at langs that actually have incorporation, and probably also figure out if it's really morphemic or word-and-paradigm.
+Hell, I suppose nouns could be "incorporated" but remain a separate word: it could soak up verbal inflections from the "preceding" verb.
+Of course, I'll have to leave room for me to play with it.
 
 ----
 

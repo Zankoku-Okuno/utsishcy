@@ -15,6 +15,12 @@
 
 \usepackage{scalefnt}
 \newcommand{\mathipa}[1]{\textrm{\scalefont{1.08}\selectfont #1}} % scaled to 1.1 also seems ok
+\AtBeginDocument{
+	\setlength\abovedisplayskip{0pt}
+	\setlength\abovedisplayshortskip{0pt}
+	\setlength\belowdisplayskip{0pt}
+	\setlength\belowdisplayshortskip{0pt}
+}
 
 
 % other LaTeX packages.....
@@ -39,7 +45,6 @@
 
 \usepackage{qtree}
 \usepackage{mathtools}
-
 
 
 
@@ -102,9 +107,9 @@ This gives 43 phonemes, a large inventory even at this conservative analysis.
 \begin{subtable}[t]{0.5\linewidth}
 	\centering
 	\begin{tabular}{cc}
+		◌ʲ & \; ◌ʷ \\
 		i & ɨ u \\
 		ɛ & a ɔ \\
-		◌ʲ & \; ◌ʷ\\
 	\end{tabular}
 	\caption{vowels}\label{t:phoneme-vowels}
 \end{subtable}
@@ -120,8 +125,8 @@ Second, there is a distinction between palatals and velars.
 Historically, this was a distinction between velar and uvular consonants which underwent fronting.
 This brings some sanity to the appearance of a /ʄ/ < */k'/ phoneme without a corresponding */k'/ < **/q'/.
 
-Third, Utsišcy consistently distinguishes between voiced and unvoiced variants of liquids /r̥, l̥, ʎ̥, j̊/ vs. /r, l, ʎ, j/.
-Note that the two semi-vowel phonemes /◌ʷ, ◌ʲ/ are not considered liquid.
+Third, Utsišcy consistently distinguishes between voiced and unvoiced variants of sonorant consonants /r̥, l̥, ʎ̥, j̊/ vs. /r, l, ʎ, j/.
+Note that the two glides vowel phonemes /◌ʷ, ◌ʲ/ are not considered part of this group.
 Nevertheless, they only appear bound to another phoneme, and in that capacity, they take on the voice of whatever consonant to which they attach.
 
 A careful reader may note the presence of three trills, but it should be noted that only /r̥,~r/ pattern as rhotics in the lexicon; /ʀ/ < */ʁ/, and so patterns as a voiced fricative (TODO and probably also has [ʁ] as an allophone).
@@ -147,15 +152,20 @@ Just to help the reader avoid guesswork, I'll quickly review the feature abbrevi
 \item $\mathipa{vowel} \Leftrightarrow \mathipa{sonorant} \land \mathipa{vocoid}$
 \item $\mathipa{glide} \Leftrightarrow \mathipa{obstruent} \land \mathipa{vocoid}$
 \item $\mathipa{obs} = \mathipa{obstruent} \nLeftrightarrow \mathipa{sonorant} = \mathipa{son}$
+\item $\mathipa{stop} \Leftrightarrow \mathipa{obs} \land \lnot\mathipa{cont}$
 \item $\mathipa{cg} = \mathipa{constricted glottis}$
 \item $\mathipa{cont} = \mathipa{continuant}$
+\item $\mathipa{approx} = \mathipa{approximant} \Leftrightarrow \mathipa{son} \land \mathipa{cons} \land \lnot\mathipa{nasal}$
 \item $\mathipa{back} \nLeftrightarrow \mathipa{front}$
 \item $\mathipa{low} \nLeftrightarrow \mathipa{raised}$
-\item $\mathipa{palatal} \Leftrightarrow \mathipa{front} \land \mathipa{dorsal}$
+\item $\mathipa{palatal} \Leftrightarrow \mathipa{dorsal} \land \mathipa{front}$
+\item $\mathipa{velar} \Leftrightarrow \mathipa{dorsal} \land \lnot\mathipa{front}$
 \end{itemize}
 \end{multicols}
 
 A table of phonemically-relevant features for each phoneme is given in fig. \ref{fig:phoneme-features}.
+TODO explain /ʀ/ better.
+it takes the place and posture as if fricative, but otherwise is marked  as other sonorants.
 I've decided that /ʀ/ is phonemically a trill rather than a fricative, even though it was historically fricative.
 
 \begin{sidewaysfigure}
@@ -201,7 +211,7 @@ dorsal &-&- &-&-&- &-&-&-&- &+&+&+&+ &+&+ &-&- &-&-&- &+&+&+ &+&+ &-&-&+ &-&- &+
 %glottal && &&& &&&& &&&& && && &&& &&& && &&& && && && &&&&&& && \\
 
 \multicolumn{1}{l}{\textbf{Tongue Posture}} \\
-front && &&& &&&& &+&+&+&+ &-&- && &&& &+&+&+ &-&- &&& && && && &+&-&-&+&-&- && \\
+front && &&& &&&& &+&+&+&+ &-&- && &&& &+&+&+ &-&- &&&- && &+&+ && &+&-&-&+&-&- && \\
 %retracted && &&& &&&& &&&& && && &&& &&& && &&& && && && &&&&&& && \\
 raised && &&& &&&& &&&& && && &&& &&& && &&& && && && &+&+&+&-&-&- && \\
 round && &&& &&&& &&&& && && &&& &&& && &&& && && && &&-&+&&-&+ && \\
@@ -284,7 +294,7 @@ I'm pretty sure I'm doing voice assimilation, but not nasal assimilation or plac
 \centering
 \Tree [
 	[.+consonantal
-		\qroof{Liquids \\ \small fig.\ \ref{fig:contrast-hier-sonorants}}.+sonorant
+		\qroof{Sonorants \\ \small fig.\ \ref{fig:contrast-hier-sonorants}}.+sonorant
 		[.-sonorant
 			\qroof{Fricatives \\ \small fig.\ \ref{fig:contrast-hier-continuants}}.+continuant
 			\qroof{Stops \\ \small fig.\ \ref{fig:contrast-hier-stops}}.-continuant
@@ -333,7 +343,7 @@ Though I've had to decide on an order to draw the tree, given the symmetry betwe
 
 \begin{figure}
 \centering
-\Tree [.{+consonantal, -sonorant, -continuant} 
+\Tree [.{+consonantal, -sonorant, -continuant}
 	[
 		[.{\footnotesize =labial}
 			[ [ ɓ ] [ ◌ ] ]
@@ -516,7 +526,7 @@ TODO when do I use capitalization?
 		f v & s z & š ž & x \\
 		& \hskip 0.8em s' & \hskip 0.8em š' & x' \\
 		& ř r & & & x̌ \\
-		& lh l & ļ ļh \\
+		& hl l & ļ hļ \\
 		w && ç g \\
 	\end{tabular}
 	\caption{consonants}\label{t:roman-consonants}
@@ -554,8 +564,8 @@ TODO when do I use capitalization?
 		\hskip 0.8em b' & t' d' & c' j' & k' \\
 		f v & s z & sh zh & x \\
 		& \hskip 0.8em s' & \hskip 1.2em sh' & x' \\
-		& rh r & & & xh \\
-		& lh l & llh ll \\
+		& hr r & & & xh \\
+		& hl l & hll ll \\
 		w && ch g \\
 	\end{tabular}
 	\caption{consonants}\label{t:ascii-consonants}
@@ -625,33 +635,30 @@ In the Cyrillization, probably replace yer (ъ) with palochka (ӏ), dependent on
 I'm not sure about using «г» for /ʀ/.
 Perhaps љ in place of ль.
 I want ҋ in place of йхӏ: it's so much easier to read.
-I know some language uses рхӏ exactly as I am here, but transporting that convension to the other liquids, though consistent, makes for some ugly n-graphs.
+I know some language uses рхӏ exactly as I am here, but transporting that convension to the other sonorants, though consistent, makes for some ugly n-graphs.
 It's a bit extreme to use a digraph оъ for a labialization phoneme.
 
 уциштьі
 
 \section{TODO Phonotactics}
 
-FIXME I'm using ``liquid'' wrong here
-
 Utsišcy syllables can be very simple:
-$$\big( C'(C_0)(C)(L) (W) \big)V \big( (L)(C)C' / (C)C'(C_0) \big)$$
+$$\big( C'(C_0)(C)(L) (G^2) \big)V \big( (C)C \big)$$
 but thanks to the many optional constituents, the parenthetical notation makes for obscure reading.
-The most common syllables structures take forms in $C(C)(W)V(C)$ (TODO I think).
-In general though, onsets may contain up to three relatively unrestricted consonants, and then additionally a liquid and/or some semi-vowels.
+The most common syllables structures take forms in $C(C/G)V(C)$ (TODO I think).
+In general though, onsets may contain up to three relatively unrestricted consonants ($C' C_0 C$) (FIXME three seems a bit much, why did I choose this over two? Oh: cšpreç), and then additionally an optional sonorant consonant ($L$) and optional glide(s) ($G^2$).
 The only required part of the syllable is the nucleus, which consists of a single vowel, although most syllables also have at least one onset consonant.
-(FIXME: As chewy as this coda logic is, I think I should just go with up to two consonants in the coda and leave it at that, maybe even less. The idea is to keep codas light even thoush onsets are heavy.;)
-A maximum of three consonants can appear in the coda, either up to a liquid and two consonants, or three consonants subject to a more complex constraint discussed below.
+The coda is comparatively light, consisting of up to two consonants.
 
-The notation $W$ is specific to Utsišcy.
-It denotes the optional presence of semi-vowels in any combination /◌ʷ,~◌ʲ,~◌ʷʲ,~◌ʲʷ/.
-However, semi-vowels are suprasegmental, so the choice of ordering /◌ʷʲ,~◌ʲʷ/ is immaterial.
+The notation $G^2$ is specific to Utsišcy.
+It denotes the optional presence of glides in any combination /◌ʷ,~◌ʲ,~◌ʷʲ,~◌ʲʷ/.
+However, glides are suprasegmental, so the choice of ordering /◌ʷʲ,~◌ʲʷ/ is immaterial.
 In the sequent, I will stick to /◌ʷʲ/, since it tends to result in better typography.
 Lexical items are unlikely to contain /◌ʷʲ/, and roots even less so.
 This combination arises primarily from morphemes crashing together.
 
-In the syllable margins (FIXME chack that this actually means ``onset and coda``), the $C', C_0$ pair are further restricted if both are present.
-When $C_0$ is present, $C'$ must be a fricative, and then $C_0$ must be a homorganic stop, except in the onset where it may also be a heterorganic fricative.
+In the onset, the $C', C_0$ pair are further restricted if both are present.
+When $C_0$ is present, it must be a fricative, and then $C'$ must be a homorganic stop or heterorganic fricative.
 (FIXME: Part of the complexity is in the analysis.
 If affricates and doubly-articulated fricatives were counted as phonemes, then I wouldn't need the restrictions between $C_0, C'$.
 Given that I want /ts/ clusters to stay together, I think these probably should be given as phonemes.)
@@ -659,40 +666,81 @@ Given that I want /ts/ clusters to stay together, I think these probably should 
 Beyond the general structure of a syllable, there are a number of additional phonotactic constraints.
 \begin{itemize}
 \item No geminates, even across syllables.
-\item No consecutive liquids within a syllable.
-\item TODO
+\item No consecutive sonorant consonants within a syllable.
+\item Adjacent stops are disallowed.
+If they do come together (e.g. as part of a morphological process), then the first stop is lenited to the corresponding fricative.
 \end{itemize}
 
+
+\section{TODO Prosody}
 
 
 \section{Phonetics}
 
-TODO equations taking the phonemic distinctions to phonetic gestures (i.e. defaults and allophony)
+TODO: intro
 
+High vowels are normally tense, but can become lax in some unstressed, open syllables.
 $$
-\begin{drcases}
-\mathipa{◌ʷʲ} \\
-\mathipa{◌ʲʷ} \\
-\end{drcases}
+\left.
+	\mathipa{i,~ɨ,~u}
 \to
-\begin{cases}
-\mathipa{[ɥ̊]} & \left/ {\left( \mathipa{C} \over \mathipa{-voice} \right)} \_\right. \\
-\mathipa{[ɥ]} & \left/ {\left( \mathipa{C} \over \mathipa{+voice} \right)} \_ \right.  \\
-\end{cases}
+	\mathipa{ɪ,~ɘ,~ʊ}
+\middle/
+	{ \sigma[-\mathipa{stress}] \over \_. }
+\right.
 $$
+However, /i/ remains tense when it is near palatal consonants, even if it would otherwise be lax.
+$$
+\mathipa{ɪ} \to \mathipa{i} \mathbin{/} C[+\mathipa{palatal}]\_, \_C[+\mathipa{palatal}]
+$$
+Though the default realization of /a/ is fairly front, it is backed by nearby velar (including uvular) consonants\footnote{I dunno if this is anyone else's problem, but I just realized /a/ is not as us en\_US «father» (that word uses [ä]), but is the exact [a] I wanted. This has been a note to myself, and anyone else who happened to get tripped up by anglo-centrism and how easy it is to type [a] instead of [ä].}.
+$$\mathipa{a} \to \mathipa{ä} \mathbin{/} C[+\mathipa{velar}]\_, \_C[+\mathipa{velar}]$$
 
+Where coronal consonants contrast with palatal consonants, those coronals /t,~d,~t',~ɗ, s,~z,~s', l̥,~l/ are denti-alveolar.
+I.e. the tip of the tongue just touches the back of the upper teeth, but the most salient closure is at the alveolar ridge.
+Vowels do not participate in velarizing /l̥,~l/; they are only velarized when they appear in a cluster with velar obstruents, but this is just usual co-articulation.
+
+TODO: changes related to ʃ
+
+Voicing constrasts are commonly eliminated or realized through other features.
+There is regressive voice assimilation between obstruents and approximants.
 $$
-\begin{drcases}
-\mathipa{◌ʷʲ} \\
-\mathipa{◌ʲʷ} \\
-\end{drcases}
+\left.
+\begin{array}{r}
+	C[+\mathipa{obs}] \\
+	C[+\mathipa{approx}] \\
+\end{array}
+\to\;
+	C[\alpha\mathipa{voice}]
+\;\middle/
+\begin{array}{l}
+	\_C[+\mathipa{obs}, \alpha\mathipa{voice}] \\
+	\_C[+\mathipa{approx}, \alpha\mathipa{voice}] \\
+\end{array}
+\right.
+$$
+Stops lose their voicing distinction at the end of words, but unvoiced stops are phonetically aspirated when not followed by another consonant, so the distinction is carried through to the phonetics by aspriation.
+$$C[+\mathipa{stop}, -\mathipa{voice}] \to C\mathipa{ʰ} \mathbin{/} \_X[-\mathipa{cons}], \_\#$$
+$$C[+\mathipa{stop}] \to C[-\mathipa{voice}] \mathbin{/} \_\#$$
+
+
+Voiceless sonorants /r̥,~l̥,~ʎ̥,~j̊/ are produced with slightly more friction that their voiced counterparts /r,~l,~ʎ,~j/, but not usually enough to qualify as a true fricative.
+
+The glides /◌ʲ,~◌ʷ/ are realized as individual phones which then take on the voice of the consonant they attach to.
+$$
+	\mathipa{◌ʲ,~◌ʷ,~◌ʷʲ}
 \to
-\left[{ \mathipa{ɥ} \over \alpha\mathipa{voice} }\right]
-	\left/ {\left( \mathipa{C} \over \alpha\mathipa{voice} \right)} \_ \right.  \\
+\left\{
+\begin{array}{lcl}
+	\mathipa{j,~w,~ɥ} &/& C[+\mathipa{voice}]\_ \\
+	\mathipa{j̊,~ʍ,~ɥ̊} &/& C[-\mathipa{voice}]\_ \\
+\end{array}
+\right.
 $$
 
-The only thing, looking at these two options for typesetting rules is that $[{phone \over feature}]$ looks strange in the second.
-My perspective is that features are phonemic rather than phonetic elements, and so should not be included in phonetic [...] transcription.
+TODO changes related to voiceless approximants
+
+TODO alternations with gaps (trills/taps, ʀ/ʁ/ɣ, k/g
 
 
 
