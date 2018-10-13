@@ -5,9 +5,9 @@
 
 \usepackage{amssymb}
 \usepackage{fontspec} % Font selection for XeLaTeX; see fontspec.pdf for documentation
-%\defaultfontfeatures{Mapping=tex-text} % to support TeX conventions like ``---''
-%\usepackage{xunicode} % Unicode support for LaTeX character names (accents, European chars, etc)
-%\usepackage{xltxtra} % Extra customizations for XeLaTeX
+\defaultfontfeatures{Mapping=tex-text} % to support TeX conventions like ``---''
+\usepackage{xunicode} % Unicode support for LaTeX character names (accents, European chars, etc)
+\usepackage{xltxtra} % Extra customizations for XeLaTeX
 
 \setmainfont[Numbers=OldStyle]{CJunicode} % set the main body font (\textrm), assumes Charis SIL is installed
 %\setsansfont{Deja Vu Sans}
@@ -663,19 +663,29 @@ When $C_0$ is present, it must be a fricative, and then $C'$ must be a homorgani
 If affricates and doubly-articulated fricatives were counted as phonemes, then I wouldn't need the restrictions between $C_0, C'$.
 Given that I want /ts/ clusters to stay together, I think these probably should be given as phonemes.)
 
+Utsišcy follows the sonority sequencing principle fairly closely, but has a compressed hierarchy: stops and affricates > fricatives > sonorant consonants (nasals, vibrants, and approximants) > glides > vowels.
+Sonority plateaus are allowed between stops and affricates (but not between two stops or two affricates) and between two fricatives.
+Glides may also be considered able to plateau, though being suprasegmental, it's not entirely clear to me if that exactly counts.
+An exception to the sequence occurs in coda liquid metathesis, which is described in §\ref{sec:phonetics}.
+
 Beyond the general structure of a syllable, there are a number of additional phonotactic constraints.
 \begin{itemize}
 \item No geminates, even across syllables.
-\item No consecutive sonorant consonants within a syllable.
-\item Adjacent stops are disallowed.
-If they do come together (e.g. as part of a morphological process), then the first stop is lenited to the corresponding fricative.
+\item Adjacent stops (incl. affricates) are disallowed, even across syllables.
+\item Nasals are not allowed to co-occur with stops within an onset or coda, though cross-syllable clusters are allowed.
+\item Adjacent vowels are not allowed.
 \end{itemize}
-
+In the course of morphological processes, these situations may occur anyway, and are resolved according to regular rules.
+When gemination would occur, one of the consonants is deleted.
+When adjacent stops come together, the first is lenited to the corresponding fricative.
+TODO nasal resolution.
+Consecutive vowels are separated by [ʔ] if the second is stressed or [h] if the second is unstressed.
+Then, if the second vowel is unstressed and followed by a voiceless consonant, that vowel is also whispered.
 
 \section{TODO Prosody}
 
 
-\section{Phonetics}
+\section{Phonetics}\label{sec:phonetics}
 
 TODO: intro
 
@@ -725,6 +735,15 @@ $$C[+\mathipa{stop}] \to C[-\mathipa{voice}] \mathbin{/} \_\#$$
 
 
 Voiceless sonorants /r̥,~l̥,~ʎ̥,~j̊/ are produced with slightly more friction that their voiced counterparts /r,~l,~ʎ,~j/, but not usually enough to qualify as a true fricative.
+
+Utsišcy has an unusually productive metathesis rule.
+When a trill or approximant is present in the coda of a syllable, it moves to the end of the coda.
+$$
+C_1[+\mathipa{son}, +\mathipa{cons}, -\mathipa{nasal}]C_2 \to C_2C_1 \mathbin{/} \_.
+$$
+Resyllabification (e.g. adding a vowel to the end of a word) can shift other coda consonants out of the coda, making this effect vanish.
+TODO: is there a pair with akr that has akr+e → akre/arke, thus distinguishing deep /ark/ from /akr/?
+FIXME: I might want to adjust the spelling of words to account for this.
 
 The glides /◌ʲ,~◌ʷ/ are realized as individual phones which then take on the voice of the consonant they attach to.
 $$

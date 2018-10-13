@@ -10,14 +10,9 @@ Phonotactics
 |______/  |_______|   |______/   \______/  |_______||_______/
 
 
+
+
 ## phonotactic processes
-
-a liquid second-to-last in the coda moves to the end of the coda at the end of a word
-
-Consecutive vowels are separated by glottal stop if the second is stressed or h if the second is unstressed.
-Then, if the second is unstressed and followed by an unvoiced consonant, that vowel is whispered.
-
-nasals not allowed with stops in the onset
 
 
 
@@ -35,6 +30,8 @@ E.g. `c > k / ʃ_` and `{c,ɟ} > g / ʒ_`.
 In fact, I may have the distinction b/t palatal and velar disappear in several contexts.
 However, /ʃ/&c really do stay [ʃ]: they were presumably the pioneers of the dorsal fronting.
 I guess that only leaves the stops (I'm thinking ʎ wasn't ʟ, but we'll see).
+
+don't forget that /t/ is laminoalveolar before /ʃ/
 
 
 Voiceless non-rhotic liquid at the start of a word? Probably gets voiced.
