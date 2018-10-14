@@ -18,19 +18,19 @@ instance Showy Segment where
 type AlphabetRead = [(String, Segment)] -- TODO segregate pairs into priorities
 type AlphabetShow = [(Segment, String)] -- TODO segregate pairs into priorities -- FIXME ([Segment], String)
 
-readAlphabet :: AlphabetRead -> String -> [[Segment]]
-readAlphabet alphabet [] = pure []
-readAlphabet alphabet input = do
+parses :: AlphabetRead -> String -> [[Segment]]
+parses alphabet [] = pure []
+parses alphabet input = do
     (pre_prefix, rest) <- prefixes
     let prefix = fromJust $ lookup pre_prefix alphabet
-    suffix <- readAlphabet alphabet rest
+    suffix <- parses alphabet rest
     pure $ prefix : suffix
     where
     prefixes = catMaybes $ (\x -> splitPrefix x input) <$> (fst <$> alphabet)
 
 -- FIXME except: this should be doing something less one-to-one, since affricates&c
-showAlphabet :: AlphabetShow -> [Segment] -> String
-showAlphabet alphabet segs = concatMap (\seg -> fromJust $ lookup seg alphabet) segs
+renders :: AlphabetShow -> [Segment] -> String
+renders alphabet segs = concatMap (\seg -> fromJust $ lookup seg alphabet) segs
 
 splitPrefix :: (Eq a) => [a] -> [a] -> Maybe ([a], [a])
 splitPrefix prefix str

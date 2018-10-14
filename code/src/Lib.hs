@@ -1,49 +1,84 @@
-{-# LANGUAGE ImplicitParams #-}
 module Lib where
 
 import Data.Maybe
+import qualified Data.Map as Map
 import Control.Arrow
+import Control.Monad
+import Control.Lens
 
 import Showy
 import Util
 import Alphabet
 import Zipf
-
+import Language
 import qualified OldLang as Old
 
 
-data Language = L
-    { readers :: [(String, AlphabetRead)]
-    , writers :: [(String, AlphabetShow)]
-    }
-    deriving (Read, Show)
+import Data.IORef
+import System.IO.Unsafe
 
 
-loadOld :: FilePath -> IO Old.Language
-loadOld = (read <$>) . readFile
+look :: (Language -> a) -> IO a
+look f = f <$> readIORef _the
 
-upgrade :: Old.Language -> Language
-upgrade (Old.L r w) = L
-    { readers = second (second Seg <$>) <$> r
-    , writers = second (first Seg <$>) <$> w
-    }
-
-save :: FilePath -> Language -> IO ()
-save fname = writeFile fname . show
-
-load :: FilePath -> IO Language
-load = (read <$>) . readFile
+smash :: (Language -> Language) -> IO ()
+smash = modifyIORef _the
 
 
-fromAscii :: Language -> String -> IO [Segment]
-fromAscii lang = chooseIo . trim . readAlphabet (fromJust $ lookup "ascii" $ readers lang)
+----------------------
+-- The "Tools" Menu --
+----------------------
+
+fromAscii :: String -> IO [Segment]
+fromAscii str = chooseIo =<< look opts
     where
-    trim xs =
+    opts :: Language -> [[Segment]]
+    opts = view $ readers.at "ascii"._Just.to (flip parses str >>> chooseSmallests)
+    chooseSmallests xs =
         let len = minimum (length <$> xs)
         in filter (\x -> length x == len) xs
 
-toIpa :: Language -> [Segment] -> String
-toIpa _ = concat . (showy <$>)
+toIpa :: [Segment] -> String
+toIpa segments = concat $ showy <$> segments
 
-toRoman :: Language -> [Segment] -> String
-toRoman lang = showAlphabet (fromJust $ lookup "roman" $ writers lang)
+toRoman :: [Segment] -> IO String
+toRoman x = look $ view $ writers.at "roman"._Just.to (flip renders x)
+
+
+---------------------
+-- The "File" Menu --
+---------------------
+
+{-# NOINLINE _theFilepath #-}
+_theFilepath :: IORef FilePath
+_theFilepath = unsafePerformIO $ newIORef (error "no lang loaded")
+{-# NOINLINE _the #-}
+_the :: IORef Language
+_the = unsafePerformIO $ newIORef (error "no lang loaded")
+
+
+open :: FilePath -> IO ()
+open filepath = do
+    writeIORef _theFilepath filepath
+    writeIORef _the =<< read <$> readFile filepath
+
+save :: IO ()
+save = do
+    fname <- readIORef _theFilepath
+    l <- show <$> readIORef _the
+    -- FIXME I definitely need to do an atomic write, not a lazy write
+    writeFile fname l
+
+saveAs :: FilePath -> IO ()
+saveAs fname = writeIORef _theFilepath fname >> save
+
+upgrade :: FilePath -> IO ()
+upgrade filepath = do
+    l' <- doUpgrade . read <$> readFile filepath
+    writeIORef _theFilepath filepath
+    writeIORef _the l'
+    where
+    doUpgrade (Old.L r w) = L
+        { _readers = Map.fromList r
+        , _writers = Map.fromList w
+        }

@@ -1,7 +1,13 @@
 module OldLang where
 
+import Control.Lens
+
+import Alphabet
+
+
 data Language = L
-    { readers :: [(String, [(String, String)])]
-    , writers :: [(String, [(String, String)])]
+    { _readers :: [(String, AlphabetRead)]
+    , _writers :: [(String, AlphabetShow)]
     }
     deriving (Read, Show)
+makeLenses ''Language
