@@ -22,16 +22,11 @@ Phonotactics
 TODO: Palatal consonants and back rounded vowels are going to interact.
 My first instinct is to back palatals to velars after rounded vowels; perhaps before is better, maybe both?
 
-/ʃ/ is normally lamino-postalveolar, but after back vowels, is becomes apico-.
-Also, /ʃ~ç/.
-
-`[+stop, +palatal] > [-palatal] / {ʃ,ʒ,ʃ'}`.
-E.g. `c > k / ʃ_` and `{c,ɟ} > g / ʒ_`.
-In fact, I may have the distinction b/t palatal and velar disappear in several contexts.
-However, /ʃ/&c really do stay [ʃ]: they were presumably the pioneers of the dorsal fronting.
-I guess that only leaves the stops (I'm thinking ʎ wasn't ʟ, but we'll see).
-
-don't forget that /t/ is laminoalveolar before /ʃ/
+TODO: more decisions about palatals.
+I may have the distinction b/t palatal and velar disappear in several contexts.
+/ʃ,ʒ,ʃ'/ really do stay [ʃ]: they were presumably the pioneers of the dorsal fronting.
+ʃ, s interaction: probly ʃ stayed x before/after s
+I'll need to consider the approximants (I'm thinking ʎ wasn't ʟ, but we'll see).
 
 
 Voiceless non-rhotic liquid at the start of a word? Probably gets voiced.

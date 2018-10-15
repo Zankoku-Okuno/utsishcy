@@ -1,0 +1,56 @@
+Causality (tense)
+    Relative causality
+    Subjunctive
+Evidentiality
+Agency (intentionality, causatives, &c)
+Person
+reality
+
+Some of these make sense on nouns and/or adjectives as well as verbs: causality, evidentiality, person (for categorization words).
+Just splashing bare verb inflections onto nouns doesn't make a ton of sense on its own though.
+Perhaps for each noun/adjective you can add a helping verb, and that's were the verbal inflections get marked; grammaticalize the helper, and you've got a new set of inflections that related to verbs "somehow".
+
+This flexibility of plopping these (often) inflectional bits everywhere feels like it would quickly become a more general pattern.
+
+artifact spirit: I want to be able to express the spirit vs. the brute fact of a thing.
+That might be free assignment of "animacy".
+Let's say nouns fall into animacy classes, but like names in romance languages, can take different phonetically-realized morphology to mark a noun as being different.
+Since nouns and verbs inflect very similarly, the animacy class markings could also be gobbled up by verbs in order to express agency.
+
+Three realis moods: objective, subjective, conjective (established by widespread convention).
+These are likely lexical rather than inflectional.
+
+------
+
+what actually are my lexical categories going to be?
+how do verbals, nominals, and modifiers relate?
+
+
+distinguish concepts identifying stuff from concepts identifying the absence of stuff.
+What about things that exist whether stuff is present or absent, it is the prenence/absence that is the concept (presence and absence are good examples, actually).
+
+instead of tense, mark causality.
+esp. have a tense for independently.
+It makes sense to have tenses that relate to other tenses in the text (is that relative tense?).
+
+evidentiality: useful for the clause, useful for a single word, too.
+The same might be said about tense, also.
+
+agency, but only in past "tenses"
+I.e. I finally sneezed vs. I accidentally snoze
+
+
+If tenses can attach anywhere, perhaps they shouldn't be obligatory?
+If I'm treating tense like topic&focus, that could be quite nice.
+
+Talk vs. speak; hear vs. listen: a telicity of connection.
+Fits well with causality, actually.
+
+
+The reason why there are count particles in Japanese: 20 balls of gomadango vs 5 orders of 4 balls of gomadango each.
+So, do I want inflected plurals (there's plenty of inflection opportunity already), or should it be periphrastic?
+
+Person agreement on categorization adjectives (e.g. colors are a common source of categorization disagreement) could make categorization clearer (e.g. that thing which I call blue, but you call violet).
+
+Incorporate instrumentals into verbs.
+E.g. walk = to foot move, run = to leg move, fly = to wing move, &c.
