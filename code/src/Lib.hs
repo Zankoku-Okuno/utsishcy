@@ -57,6 +57,11 @@ _the :: IORef Language
 _the = unsafePerformIO $ newIORef (error "no lang loaded")
 
 
+{- FIXME I need to use Aeson to serialize my conlang db,
+since it can adapt to internal and backwards-compatible changes
+more easily than derived Read/Show.
+-}
+
 open :: FilePath -> IO ()
 open filepath = do
     writeIORef _theFilepath filepath
