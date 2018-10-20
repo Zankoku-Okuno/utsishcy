@@ -25,6 +25,10 @@ These are likely lexical rather than inflectional.
 what actually are my lexical categories going to be?
 how do verbals, nominals, and modifiers relate?
 
+the way I'm instinctually thinking about morphology, the verbs are going to go crazy.
+I'll have to start moving things out of the verb, like tense markers.
+That or really take fusion to heart.
+
 
 distinguish concepts identifying stuff from concepts identifying the absence of stuff.
 What about things that exist whether stuff is present or absent, it is the prenence/absence that is the concept (presence and absence are good examples, actually).
